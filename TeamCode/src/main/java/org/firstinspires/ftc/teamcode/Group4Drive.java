@@ -9,6 +9,8 @@ import com.qualcomm.robotcore.hardware.IMU;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 
+import com.acmerobotics.dashboard.config.Config;
+
 @TeleOp(name = "Group 4 Drive", group = "Robot")
 
 public class Group4Drive extends OpMode {
@@ -66,7 +68,7 @@ public class Group4Drive extends OpMode {
     }
 
     private void driveFieldRelative(double forward, double right, double rotate) {
-        // First, convert direction being asked to drive to polar coordinates
+
         double theta = Math.atan2(forward, right);
         double r = Math.hypot(right, forward);
 
